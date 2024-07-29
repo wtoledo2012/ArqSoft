@@ -1,0 +1,9 @@
+# Proxy a la aplicación myapp a través de srvwildfly
+myapp.example.com {
+    reverse_proxy srvwildfly:8080  # Redirige a srvwildfly en el puerto 8080
+}
+
+# Opcionalmente, puedes agregar un bloque para el acceso a la API
+api.example.com {
+    reverse_proxy srvapiwto:80
+}
